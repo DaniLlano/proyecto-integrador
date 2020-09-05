@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     color: #667eea;
 }
@@ -74,10 +74,9 @@ body {
     text-align: center;
     font-size: 30px;
     color: #667eea;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #bandas {
@@ -88,12 +87,16 @@ body {
     margin-bottom: 50px;
 }
 
-.containerArtistas {
+#containerArtistas {
     margin: 0 auto;
     display: grid;
     grid-gap: 7rem 1rem;
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
+    font-size: 30px;
+    font-weight: bold;    
+    padding-top: 5rem;
+    padding-bottom: 10rem;
 }
 
 .Banda1 {
@@ -132,18 +135,12 @@ body {
     text-align: center;
 }
 
-.containerArtistas img {
+#containerArtistas img {
     height: 230px;
+    width: auto;
 }
 
 #entradas {
-    text-align: center;
-    color: #667eea;
-    font-size: 30px;
-    padding-top: 70px;
-}
-
-.entradas {
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
@@ -151,12 +148,12 @@ body {
     padding: 70px;
 }
 
-.entradas img {
+#entradas img {
     height: 50%;
     width: 100%;
 }
 
-.entradas p {    
+#entradas p {    
     margin-top: 0px;
     margin-bottom: 5px;
 }
@@ -198,7 +195,7 @@ button:hover {
 
 
 
-@media (min-width:300px) {
+@media (min-width:320px) and (max-width:480px) {
     .menu {
         display: none;
     }
@@ -214,38 +211,65 @@ button:hover {
         height: 550px;
     }
     .fechas {
-        font-size: 20px;
         color: #667eea;
-        width: 100%;
-        height: 100%;
+        width: 200px;
         padding: 2rem;
     }
-    .fechas h1 {
+    .fechas .cuando {
         display: none;
     }
     #bandas {
         display: none;
     }
-    .containerArtistas {
+    #containerArtistas {
         grid-gap: 5rem;
         grid-template-columns: 1fr;
     }
-
-    .containerArtistas img {
+    #containerArtistas img {
         width: 100%;
     }
     #entradas {
-        font-size: 20px;
-    }
-    .entradas {
         grid-gap: 3rem;
         grid-template-columns: 1fr;
         padding: 40px;
     }
 }
 
+@media (min-width: 481px) and (max-width:768px) {
+    .menu {
+        display: none;
+    }
+    .cabecera {
+        justify-content: flex-end;
+        padding-right: 20px;
+        height: 80px;
+    }
+    .mangueras {
+        width: 100%;
+    }
+    .fechas .cuando {
+        display: none;
+    }
+    .fechas {
+        color: #667eea;
+        width: 200px;
+        padding: 2rem;
+    }
+    #containerArtistas img {
+        width: 75%;
+    }
+    #containerArtistas {
+        grid-gap: 5rem;
+        grid-template-columns: 1fr;
+    }
+    #entradas {
+        grid-gap: 3rem;
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+}
 
-@media (min-width:600px) {
+@media (min-width:769px) and (max-width:1024px){
     .cabecera {
         font-size: 15px
     }
@@ -256,30 +280,23 @@ button:hover {
         height: 550px;
     }
     .fechas {
-        font-size: 20px;
-        width: 100%;
-        height: 100%;
-        padding: 0;
+        height: 100%;        
+        width: 400px;
+        padding: 2rem;
     }
-    .fechas h1 {
+    .fechas .cuando {
         display: block;
     }
-    #bandas h1 {
-        display: block;
-    }
-    .containerArtistas {
+    #containerArtistas {
         grid-gap: 5rem;
         grid-template-columns: 1fr;
     }
-    .containerArtistas img {
+    #containerArtistas {
         width: 75%;
     }
     #entradas {
-        font-size: 20px;
-    }
-    .entradas {
         grid-gap: 3rem;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         padding: 40px;
     }
     .entrada {
@@ -287,7 +304,7 @@ button:hover {
     }
 }
 
-@media (min-width:900px) {
+@media (min-width:1025px) and (max-width:1200px){
     .cabecera {
         font-size: 15px
     }
@@ -298,28 +315,18 @@ button:hover {
         height: 550px;
     }
     .fechas {
-        font-size: 20px;
-        width: 100%;
         height: 100%;
-        padding: 0;
+        width: 500px;
+        padding: 2rem;
     }
-    .fechas h1 {
+    .fechas .cuando {
         display: block;
     }
-    #bandas h1 {
-        display: block;
-    }
-    .containerArtistas {
+    #containerArtistas {
         grid-gap: 5rem;
         grid-template-columns: 1fr 1fr;
     }
-    .containerArtistas img {
-        width: 90%;
-    }
     #entradas {
-        font-size: 20px;
-    }
-    .entradas {
         grid-gap: 3rem;
         grid-template-columns: 1fr 1fr;
         padding: 40px;
@@ -328,4 +335,3 @@ button:hover {
     height: 500px;
     }
 }
-
